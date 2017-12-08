@@ -21,7 +21,7 @@ func handle(conn net.Conn) {
 			bufFormat = append(bufFormat, buf[k])
 		}
 	}
-	str := fmt.Sprintf("read form socket done: \n%s\n", bufFormat)
+	str := fmt.Sprintf("read form socket done: {\n%s\n}", bufFormat)
 	fmt.Println(str)
 	ch <- struct{}{}
 }
